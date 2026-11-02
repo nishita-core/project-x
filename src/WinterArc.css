@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+.winter-page {
+  min-height: 100vh;
+  padding: 28px;
+  color: #edf5f1;
+  background:
+    radial-gradient(circle at 80% 5%, rgba(35, 111, 85, .19), transparent 30%),
+    radial-gradient(circle at 10% 90%, rgba(35, 111, 85, .12), transparent 28%),
+    #080d0b;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.winter-shell { max-width: 1120px; margin: 0 auto; }
+.winter-topbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 4px 0 28px; border-bottom: 1px solid rgba(214,239,226,.1); }
+.winter-back { border: 1px solid rgba(214,239,226,.16); border-radius: 999px; padding: 9px 15px; color: #d9e9e0; background: rgba(255,255,255,.035); cursor: pointer; font: inherit; }
+.winter-back:hover { border-color: #75c69b; color: #9be0b8; }
+.winter-brand { color: #eaf5ee; font: 800 13px 'Manrope', sans-serif; letter-spacing: 2px; }
+.winter-brand i { color: #83cba2; font-style: normal; font-weight: 600; }
+.winter-status { color: #9ab5a5; font-size: 10px; letter-spacing: 1.5px; }
+.winter-status span { display: inline-block; width: 7px; height: 7px; margin-right: 8px; border-radius: 50%; background: #78d69f; box-shadow: 0 0 12px #78d69f; }
+.winter-hero { display: flex; align-items: center; justify-content: space-between; padding: 66px 0 44px; }
+.winter-eyebrow { margin: 0 0 12px; color: #80c69e; font-size: 10px; font-weight: 700; letter-spacing: 2.3px; }
+.winter-hero h1 { margin: 0; color: #f1f7f3; font: 800 clamp(36px, 6vw, 65px)/1.08 'Manrope', sans-serif; letter-spacing: -2.8px; }
+.winter-hero h1 span { color: #83d0a2; }
+.winter-subtitle { margin: 16px 0 0; color: #9aada2; font-size: 15px; }
+.winter-snowflake { display: grid; width: 118px; height: 118px; place-items: center; border: 1px solid rgba(131,208,162,.2); border-radius: 32px; color: #8bd5a9; background: linear-gradient(145deg, rgba(67,133,94,.17), rgba(255,255,255,.025)); font-size: 62px; transform: rotate(8deg); }
+.winter-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+.winter-stat-card { min-height: 142px; padding: 21px; border: 1px solid rgba(210,237,221,.1); border-radius: 17px; background: linear-gradient(145deg, rgba(24,39,31,.88), rgba(13,21,17,.94)); }
+.winter-stat-label { display: block; margin-bottom: 13px; color: #8fa99a; font-size: 10px; font-weight: 700; letter-spacing: 1.6px; }
+.winter-stat-card strong { color: #f0f8f2; font: 800 27px 'Manrope', sans-serif; }
+.winter-stat-card strong small { color: #83cba2; font-size: 13px; }
+.winter-stat-card p { margin: 9px 0 0; color: #82978a; font-size: 11px; }
+.winter-level-track { height: 5px; margin-top: 12px; overflow: hidden; border-radius: 10px; background: rgba(255,255,255,.09); }
+.winter-level-track span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #4a9d70, #a1e3b7); transition: width .25s ease; }
+.winter-workspace { margin-top: 42px; padding: 28px; border: 1px solid rgba(210,237,221,.1); border-radius: 20px; background: rgba(13,21,17,.84); }
+.winter-section-heading { display: flex; align-items: end; justify-content: space-between; gap: 12px; }
+.winter-section-heading h2 { margin: 0; color: #edf6ef; font: 700 25px 'Manrope', sans-serif; }
+.winter-date { color: #91a99a; font-size: 12px; }
+.winter-add-form { display: flex; gap: 10px; margin-top: 24px; }
+.winter-add-form input { flex: 1; min-width: 0; padding: 14px 16px; outline: none; border: 1px solid rgba(210,237,221,.13); border-radius: 11px; color: #edf5ef; background: #0a120e; font: inherit; }
+.winter-add-form input:focus { border-color: #69b989; box-shadow: 0 0 0 3px rgba(105,185,137,.1); }
+.winter-add-form button { padding: 0 20px; border: 0; border-radius: 11px; color: #07120b; background: #8bd3a7; font: 700 13px 'DM Sans', sans-serif; cursor: pointer; }
+.winter-add-form button:hover { background: #a4e5bb; }
+.winter-tabs { display: flex; gap: 7px; margin: 25px 0 14px; }
+.winter-tabs button { padding: 8px 13px; border: 1px solid transparent; border-radius: 8px; color: #91a79a; background: transparent; font: 600 12px 'DM Sans', sans-serif; cursor: pointer; }
+.winter-tabs button.active { border-color: rgba(131,208,162,.2); color: #a1e0b7; background: rgba(105,185,137,.1); }
+.winter-task-list { display: grid; gap: 9px; }
+.winter-task { display: flex; align-items: center; gap: 13px; padding: 13px 14px; border: 1px solid rgba(210,237,221,.08); border-radius: 11px; background: rgba(255,255,255,.025); }
+.winter-check { display: grid; flex: 0 0 21px; width: 21px; height: 21px; place-items: center; border: 1px solid #668675; border-radius: 7px; color: #07120b; background: transparent; cursor: pointer; }
+.winter-task.is-done .winter-check { border-color: #8bd3a7; background: #8bd3a7; }
+.winter-task-title { flex: 1; color: #e1ece5; font-size: 13px; }
+.winter-task.is-done .winter-task-title { color: #789082; text-decoration: line-through; }
+.winter-task-xp { color: #83cba2; font-size: 10px; white-space: nowrap; }
+.winter-delete { border: 0; color: #82968a; background: transparent; font-size: 20px; cursor: pointer; }
+.winter-delete:hover { color: #f08b8b; }
+.winter-empty { display: grid; min-height: 150px; place-content: center; justify-items: center; text-align: center; }
+.winter-empty span { color: #83cba2; font-size: 25px; }
+.winter-empty strong { margin-top: 7px; color: #dce9e0; font: 700 14px 'Manrope', sans-serif; }
+.winter-empty p { margin: 7px 0 0; color: #819589; font-size: 11px; }
+.winter-footer { display: flex; justify-content: space-between; gap: 12px; padding: 25px 2px 8px; color: #6f8879; font-size: 9px; font-weight: 700; letter-spacing: 1.6px; }
+.winter-footer b { color: #83cba2; }
+
+@media (max-width: 700px) {
+  .winter-page { padding: 17px; }
+  .winter-topbar { flex-wrap: wrap; }
+  .winter-status { display: none; }
+  .winter-hero { padding: 48px 0 30px; }
+  .winter-snowflake { width: 72px; height: 72px; border-radius: 20px; font-size: 38px; }
+  .winter-stats { grid-template-columns: 1fr; }
+  .winter-stat-card { min-height: 0; }
+  .winter-workspace { padding: 19px; }
+  .winter-add-form { flex-direction: column; }
+  .winter-add-form button { min-height: 44px; }
+  .winter-task { gap: 9px; }
+  .winter-task-xp { font-size: 9px; }
+  .winter-footer { flex-direction: column; }
+}

@@ -1,0 +1,372 @@
+/* ================================
+   GAMIFICATION 2.0
+================================ */
+
+.px-gamification {
+  display: grid;
+  gap: 22px;
+  margin: 22px 0;
+  font-family: inherit;
+}
+
+/* XP POPUP */
+
+.px-xp-popup {
+  position: fixed;
+  top: 28px;
+  right: 28px;
+  z-index: 99999;
+  padding: 16px 24px;
+  border: 1px solid rgba(190, 150, 255, 0.7);
+  border-radius: 14px;
+  background: linear-gradient(135deg, #351568, #711fd1);
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  box-shadow: 0 0 30px rgba(151, 75, 255, 0.55);
+  animation: pxXpEnter 0.45s ease, pxXpExit 0.4s ease 2.1s forwards;
+}
+
+@keyframes pxXpEnter {
+  from {
+    opacity: 0;
+    transform: translateX(50px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes pxXpExit {
+  to {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+}
+
+/* LEVEL UP OVERLAY */
+
+.px-level-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  display: grid;
+  place-items: center;
+  background: rgba(8, 4, 20, 0.82);
+  backdrop-filter: blur(12px);
+  animation: pxOverlayIn 0.35s ease;
+}
+
+.px-level-animation {
+  width: min(90%, 390px);
+  padding: 38px 25px;
+  border: 1px solid rgba(190, 140, 255, 0.65);
+  border-radius: 25px;
+  background: linear-gradient(145deg, #21103d, #421477, #160b2b);
+  text-align: center;
+  box-shadow: 0 0 70px rgba(145, 65, 255, 0.5);
+  animation: pxLevelPop 0.65s cubic-bezier(.2, 1.5, .5, 1);
+}
+
+.px-level-animation span {
+  display: block;
+  font-size: 65px;
+  margin-bottom: 12px;
+  animation: pxTrophyFloat 1.5s ease-in-out infinite alternate;
+}
+
+.px-level-animation p {
+  margin: 0;
+  color: #d8b5ff;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 5px;
+}
+
+.px-level-animation strong {
+  display: block;
+  margin: 12px 0;
+  color: #fff;
+  font-size: 38px;
+  text-shadow: 0 0 22px #b56aff;
+}
+
+.px-level-animation small {
+  color: #c9b0e8;
+  letter-spacing: 2px;
+  font-size: 10px;
+}
+
+@keyframes pxOverlayIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pxLevelPop {
+  from {
+    opacity: 0;
+    transform: scale(0.65);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pxTrophyFloat {
+  from { transform: translateY(0); }
+  to { transform: translateY(-10px); }
+}
+
+/* PANEL HEADINGS */
+
+.px-gamification .px-panel-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.px-gamification .px-panel-heading h2 {
+  margin: 7px 0 0;
+}
+
+.px-gamification .px-label {
+  color: #b98aff;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.px-gamification .px-panel-icon {
+  font-size: 27px;
+}
+
+/* DAILY MISSIONS */
+
+.px-mission-list {
+  display: grid;
+  gap: 13px;
+}
+
+.px-mission-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 17px;
+  border: 1px solid rgba(166, 113, 225, 0.2);
+  border-radius: 15px;
+  background: rgba(110, 65, 160, 0.08);
+  transition: 0.25s ease;
+}
+
+.px-mission-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(190, 140, 255, 0.6);
+  background: rgba(125, 75, 190, 0.15);
+}
+
+.px-mission-card.completed {
+  border-color: rgba(85, 220, 170, 0.45);
+  background: rgba(55, 180, 130, 0.08);
+}
+
+.px-mission-icon {
+  display: grid;
+  place-items: center;
+  min-width: 43px;
+  height: 43px;
+  border-radius: 12px;
+  background: rgba(155, 100, 230, 0.16);
+  font-size: 22px;
+}
+
+.px-mission-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.px-mission-info strong,
+.px-mission-info small {
+  display: block;
+}
+
+.px-mission-info strong {
+  color: #fff;
+  font-size: 14px;
+}
+
+.px-mission-info small {
+  margin-top: 5px;
+  color: #a99bbd;
+  font-size: 11px;
+}
+
+.px-mission-track {
+  height: 6px;
+  margin-top: 12px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.px-mission-track div {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #8545e8, #d39aff);
+  box-shadow: 0 0 12px rgba(177, 110, 255, 0.55);
+  transition: width 0.4s ease;
+}
+
+.px-mission-card.completed .px-mission-track div {
+  background: linear-gradient(90deg, #29b98c, #8af0c8);
+}
+
+.px-mission-status {
+  color: #c99aff;
+  font-size: 10px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.px-mission-card.completed .px-mission-status {
+  color: #69e7b5;
+}
+
+/* SECRET ACHIEVEMENTS */
+
+.px-secret-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 15px 17px;
+  border: 1px solid rgba(171, 115, 255, 0.4);
+  border-radius: 12px;
+  background: rgba(105, 55, 165, 0.13);
+  color: #d9bdff;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.px-secret-toggle:hover {
+  border-color: #c18cff;
+  background: rgba(135, 75, 210, 0.23);
+  box-shadow: 0 0 20px rgba(145, 75, 230, 0.15);
+}
+
+.px-secret-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 13px;
+  margin-top: 18px;
+}
+
+.px-secret-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-height: 155px;
+  padding: 18px 10px;
+  border: 1px solid rgba(160, 120, 200, 0.2);
+  border-radius: 15px;
+  background: rgba(100, 65, 145, 0.08);
+  text-align: center;
+  transition: 0.25s ease;
+}
+
+.px-secret-card > span {
+  font-size: 30px;
+}
+
+.px-secret-card strong {
+  color: #fff;
+  font-size: 12px;
+}
+
+.px-secret-card small {
+  color: #a99bbd;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.px-secret-card b {
+  margin-top: auto;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.px-secret-card.locked {
+  opacity: 0.65;
+  filter: grayscale(0.65);
+}
+
+.px-secret-card.locked b {
+  color: #a69ab5;
+}
+
+.px-secret-card.unlocked {
+  border-color: rgba(205, 155, 255, 0.55);
+  background: linear-gradient(
+    145deg,
+    rgba(110, 55, 175, 0.2),
+    rgba(65, 35, 110, 0.15)
+  );
+  box-shadow: inset 0 0 20px rgba(150, 90, 230, 0.08);
+}
+
+.px-secret-card.unlocked b {
+  color: #d4a4ff;
+}
+
+.px-secret-card.unlocked:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 22px rgba(155, 95, 240, 0.2);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+  .px-secret-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .px-xp-popup {
+    top: 15px;
+    right: 12px;
+    left: 12px;
+    text-align: center;
+  }
+
+  .px-mission-card {
+    gap: 10px;
+    padding: 13px;
+  }
+
+  .px-mission-icon {
+    min-width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+
+  .px-mission-status {
+    font-size: 9px;
+  }
+
+  .px-secret-grid {
+    gap: 9px;
+  }
+
+  .px-secret-card {
+    min-height: 145px;
+    padding: 14px 7px;
+  }
+}
